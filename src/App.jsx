@@ -1,7 +1,8 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import LoadData from "./Components/LoadData/LoadData";
+import SelectedPlayer from "./Components/SelectedPlayer/SelectedPlayer";
 
 // Fetch Data
 
@@ -10,12 +11,17 @@ const fetchData = async () => {
   return res.json();
 };
 
+const promiseData = fetchData();
 function App() {
-  const promiseData = fetchData();
+  const [toggle, setToggle] = useState(true);
+  const [balance, setBalance] = useState(600000000);
+
+  const [select, setSelect] = useState([]);
+
   return (
     <div>
       {/* Navbar */}
-      <Navbar></Navbar>
+      <Navbar balance={balance}></Navbar>
 
       {/* Heading */}
       <Header>
@@ -38,21 +44,36 @@ function App() {
       </Header>
 
       {/* LoadData */}
-
-      <Suspense>
-        <div className="w-11/12 mx-auto mt-20 flex items-center justify-between">
-          <h1 className="font-bold flex text-2xl">Available Players</h1>
-          <div>
-            <button className="border rounded-l-xl border-r-0 px-3 py-1 bg-[#E7FE29] cursor-pointer">
-              Available
-            </button>
-            <button className="border rounded-r-xl border-l-0 px-3 py-1 cursor-pointer">
-              Selected <span>(0)</span>
-            </button>
-          </div>
+      <div className="mt-20 w-11/12 mx-auto flex items-center justify-between">
+        <h1 className="font-bold flex text-2xl">{`${toggle === true ? "Available Players" : "Selected Players"}`}</h1>
+        <div>
+          <button
+            onClick={() => setToggle(true)}
+            className={`border border-gray-300 rounded-l-md font-bold border-r-0 px-3 py-1 ${toggle === true ? "bg-[#E7FE29]" : ""} cursor-pointer`}
+          >
+            Available
+          </button>
+          <button
+            onClick={() => setToggle(false)}
+            className={`border border-gray-300 rounded-r-md border-l-0 px-3 py-1 cursor-pointer ${toggle === false ? "bg-[#E7FE29]" : ""}`}
+          >
+            Selected <span>(0)</span>
+          </button>
         </div>
-        <LoadData promiseData={promiseData}></LoadData>
-      </Suspense>
+      </div>
+      {toggle === true ? (
+        <Suspense>
+          <LoadData
+            setSelect={setSelect}
+            select={select}
+            balance={balance}
+            setBalance={setBalance}
+            promiseData={promiseData}
+          ></LoadData>
+        </Suspense>
+      ) : (
+        <SelectedPlayer select={select}></SelectedPlayer>
+      )}
     </div>
   );
 }
