@@ -19,7 +19,7 @@ const Navbar = () => {
             <a href="#">Schedules</a>
           </li>
           <button className="font-bold border px-3 py-1 rounded-lg border-gray-200">
-            0 Coin
+            600000000 Coin
           </button>
         </ul>
       </div>

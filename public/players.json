@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Viral Kohli",
+    "country": "India",
+    "role": "All-Rounder",
+    "rating": 8.5,
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1500000,
+    "image": "https://i.ibb.co.com/nNpdX7qb/164-compress.avif"
+  },
+  {
+    "name": "Rohit Sharma",
+    "country": "India",
+    "role": "Batsman",
+    "rating": 8.2,
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1200000,
+    "image": "https://i.ibb.co.com/chxRK3Kn/10915-camedia.png"
+  },
+  {
+    "name": "MS Dhoni",
+    "country": "India",
+    "role": "Wicket-Keeper",
+    "rating": 7.9,
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1100000,
+    "image": "https://i.ibb.co.com/5gWsGHr5/3676.webp"
+  },
+  {
+    "name": "AB de Villiers",
+    "country": "South Africa",
+    "role": "Batsman",
+    "rating": 8.4,
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1400000,
+    "image": "https://i.ibb.co.com/xqnDmhJH/792-camedia.png"
+  },
+  {
+    "name": "Chris Gayle",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "rating": 8.3,
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1300000,
+    "image": "https://i.ibb.co.com/mYnKdJJ/1417-camedia.png"
+  },
+  {
+    "name": "David Warner",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": 8.1,
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1250000,
+    "image": "https://i.ibb.co.com/dwQnxHf6/5380.webp"
+  },
+  {
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "rating": 8.4,
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1350000,
+    "image": "https://i.ibb.co.com/HT6vqZ7N/1154.png"
+  },
+  {
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "rating": 8.2,
+    "battingStyle": "Right-Hand-Bat",
+    "price": 1280000,
+    "image": "https://i.ibb.co.com/8DDx6jVt/12047.webp"
+  },
+  {
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Bowler",
+    "rating": 8.6,
+    "bowlingStyle": "Right-Arm-Legbreak",
+    "price": 1150000,
+    "image": "https://i.ibb.co.com/d04xPXJC/65748.webp"
+  },
+  {
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "role": "Bowler",
+    "rating": 8.4,
+    "bowlingStyle": "Right-Arm-Fast",
+    "price": 1250000,
+    "image": "https://i.ibb.co.com/fGXHfbzQ/jasprit-bumrah-14-10-2023.webp"
+  },
+  {
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "role": "Bowler",
+    "rating": 8.5,
+    "bowlingStyle": "Left-Arm-Fast",
+    "price": 1300000,
+    "image": "https://i.ibb.co.com/wT8rBGX/mitchell-starc-11-10-2023.webp"
+  },
+  {
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": 8.5,
+    "battingStyle": "Left-Hand-Bat",
+    "price": 1380000,
+    "image": "https://i.ibb.co.com/YFs0g5Mf/shakib-al-hassan.webp"
+  }
+]
