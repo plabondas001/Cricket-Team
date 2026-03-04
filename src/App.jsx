@@ -18,6 +18,12 @@ function App() {
 
   const [select, setSelect] = useState([]);
 
+  const removePlayer = (p) => {
+    const filterPlayer = select.filter((play) => play.name !== p.name);
+    setSelect(filterPlayer);
+    setBalance(balance + p.price);
+  };
+
   return (
     <div>
       {/* Navbar */}
@@ -45,7 +51,7 @@ function App() {
 
       {/* LoadData */}
       <div className="mt-20 w-11/12 mx-auto flex items-center justify-between">
-        <h1 className="font-bold flex text-2xl">{`${toggle === true ? "Available Players" : "Selected Players"}`}</h1>
+        <h1 className="font-bold flex text-2xl">{`${toggle === true ? "Available Players" : `Selected Players(${select.length}/6)`}`}</h1>
         <div>
           <button
             onClick={() => setToggle(true)}
@@ -57,7 +63,7 @@ function App() {
             onClick={() => setToggle(false)}
             className={`border border-gray-300 rounded-r-md border-l-0 px-3 py-1 cursor-pointer ${toggle === false ? "bg-[#E7FE29]" : ""}`}
           >
-            Selected <span>(0)</span>
+            Selected <span>{select.length}</span>
           </button>
         </div>
       </div>
@@ -72,7 +78,10 @@ function App() {
           ></LoadData>
         </Suspense>
       ) : (
-        <SelectedPlayer select={select}></SelectedPlayer>
+        <SelectedPlayer
+          removePlayer={removePlayer}
+          select={select}
+        ></SelectedPlayer>
       )}
     </div>
   );

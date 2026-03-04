@@ -1,4 +1,4 @@
-const Navbar = ({balance}) => {
+const Navbar = ({ balance }) => {
   return (
     <div className="w-11/12 mx-auto mt-5 flex items-center justify-between">
       <div>
